@@ -1,3 +1,5 @@
 {
-    "julia.environmentPath": "~/Documents/GitHub/Rearm-CheckFiles"
+    "julia.environmentPath": "~/Documents/GitHub/Rearm-CheckFiles",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true
 }
