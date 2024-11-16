@@ -1,6 +1,9 @@
 # big data files are stored after symlinks
 *.lnk
 
+# debug logs are stored in the debug folder
+debug/
+
 # https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 .vscode/*
 !.vscode/settings.json
