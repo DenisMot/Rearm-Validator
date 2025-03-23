@@ -1,0 +1,20 @@
+# run: conda env create --file rearm.yml
+name: rearm
+dependencies:
+# basic tools 
+  - python=3.11.7
+  - numpy
+  - matplotlib
+  - pandas
+  - scipy # for the filtering 
+# vscode jupyter
+  - ipykernel 
+  - nbformat
+  - ipympl
+# utilities 
+  - pip
+# data access 
+  - pyxdf
+  - pip:
+      - openmovement
+      
