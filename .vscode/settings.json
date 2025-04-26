@@ -2,9 +2,11 @@
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.autoImportCompletions": true,
     "cSpell.words": [
+        "filtfilt",
         "kinect",
         "levelname",
         "mocap",
+        "panu",
         "pyxdf",
         "skiprows"
     ],
