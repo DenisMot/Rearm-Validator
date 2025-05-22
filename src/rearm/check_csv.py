@@ -27,6 +27,9 @@ def is_lsl_mouse_csv_file(fullFname):
 
     if not fullFname.endswith(".csv"):
         return False
+    # do not test hidden files 
+    if os.path.split(fullFname)[-1].startswith("."):
+        return False
 
     with open(fullFname, "r") as f:
         header_lines = [f.readline().strip() for _ in range(2)]
@@ -135,6 +138,10 @@ def is_lsl_kinect_csv_file(fullFname):
     Check if a file is created by the LSL Kinect Recorder
     """
 
+    # do not test hidden files 
+    if os.path.split(fullFname)[-1].startswith("."):
+        return False
+      
     # any LSL-kinect file should have a one line header with
     # "Software : LSL_Kinect" as a key-value pair
     # the key-value pairs are separated by a comma
@@ -230,6 +237,11 @@ def check_csv_date(fullFname, msg=""):
 
     if not fullFname.endswith(".csv"):
         msg += f"{fullFname} is not a csv file."
+        return date, msg
+
+    # do not test hidden files
+    if os.path.split(fullFname)[-1].startswith("."):
+        msg += f"{fullFname} is a hidden file."
         return date, msg
 
     if not is_lsl_mouse_or_kinect_csv_file(fullFname):
