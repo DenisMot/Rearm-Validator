@@ -4,6 +4,10 @@
 # debug logs are stored in the debug folder
 debug/
 
+# results can be recomputed from the raw data
+results/
+res/
+
 # https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 .vscode/*
 !.vscode/settings.json
