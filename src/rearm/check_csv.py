@@ -39,6 +39,9 @@ def is_lsl_mouse_csv_file(fullFname):
     if header_lines[0] == "" or header_lines[1] == "":
         return False
 
+    # initialize the return value 
+    is_lsl_mouse = False
+
     # any LSL-mouse file should have a one line header
     # with "software LSL-mouse" as a key-value pair
     # the key-value pairs are separated by a semicolon
@@ -47,7 +50,6 @@ def is_lsl_mouse_csv_file(fullFname):
     # the first line should contain the software version
     header_txt = header_lines[0]
     if len(header_txt) > 1:
-        is_lsl_mouse = False
         for key_value in header_txt.split(";"):
             k_v = key_value.split()
             if len(k_v) == 2:
