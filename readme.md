@@ -39,7 +39,7 @@ conda env create -f rearm.yml       # Create the environment from the yml file
 
 # Outputs
 
-The output of the notebooks consists in `.log` and `.csv` or `.tsv` files stored next to the data files. 
+The output of the notebooks consists in `*.log` and `*.csv` or `*.tsv` files stored next to the data files. 
 
 The most important files are:
 

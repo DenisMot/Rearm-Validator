@@ -73,30 +73,6 @@ def get_stream(xdf_data, searched_stream_type, searched_stream_names):
     return found_streams[0]
 
 
-def get_kinect_channel(kinect_mocap, channel_name):
-    """Get one channel from the kinect mocap by its name"""
-    channel_index = -1
-    nb_channels = len(
-        kinect_mocap["info"]["desc"][0]["channels"][0]["channel"]
-    )
-    for i in range(nb_channels):
-        current_name = (
-            kinect_mocap["info"]["desc"][0]["channels"][0]
-            ["channel"][i]["label"][0]
-        )
-        if current_name == channel_name:
-            channel_index = i
-            break
-    if channel_index == -1:
-        raise ValueError(
-            f"Joint {channel_name} not found in the kinect mocap data"
-        )
-
-    channel_data = kinect_mocap["time_series"][:, channel_index]
-
-    return channel_data
-
-
 def get_kinect_channel_index(kinect_mocap, channel_name):
     """Get the index of one channel from the kinect mocap by its name"""
     channel_index = -1
