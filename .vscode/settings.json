@@ -1,5 +1,16 @@
 {
-    "julia.environmentPath": "~/Documents/GitHub/Rearm-CheckFiles",
     "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.autoImportCompletions": true
+    "python.analysis.autoImportCompletions": true,
+    "cSpell.words": [
+        "filtfilt",
+        "kinect",
+        "levelname",
+        "mocap",
+        "panu",
+        "pyxdf",
+        "skiprows"
+    ],
+    "flake8.args": [
+        "--max-line-length=120"
+    ],
 }
